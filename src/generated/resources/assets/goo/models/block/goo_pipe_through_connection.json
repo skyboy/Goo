@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "goo:block/pump_base_bottom",
+    "base_bottom": "goo:block/pump_base_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "down": {
+          "texture": "#base_bottom"
+        },
+        "up": {
+          "texture": "#base_bottom"
+        },
+        "north": {
+          "texture": "#base_bottom"
+        },
+        "south": {
+          "texture": "#base_bottom"
+        },
+        "west": {
+          "texture": "#base_bottom"
+        },
+        "east": {
+          "texture": "#base_bottom"
+        }
+      }
+    }
+  ]
+}

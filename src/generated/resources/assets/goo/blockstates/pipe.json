@@ -1,0 +1,196 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "connection_down": "disconnected",
+        "connection_up": "disconnected",
+        "connection_north": "disconnected",
+        "connection_south": "disconnected",
+        "connection_west": "disconnected",
+        "connection_east": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_down": "connected",
+        "connection_up": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_through_connection",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_north": "connected",
+        "connection_south": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_through_connection",
+        "x": 270,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_west": "connected",
+        "connection_east": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_through_connection",
+        "x": 90,
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_down": "connected",
+        "connection_up": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_down": "input",
+        "connection_down": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_up": "connected",
+        "connection_down": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_up": "input",
+        "connection_up": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_north": "connected",
+        "connection_south": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "x": 270,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_north": "input",
+        "connection_north": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "x": 270,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_south": "connected",
+        "connection_north": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "x": 90,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_south": "input",
+        "connection_south": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "x": 90,
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_west": "connected",
+        "connection_east": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "x": 90,
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_west": "input",
+        "connection_west": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "x": 90,
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "connection_east": "connected",
+        "connection_west": "disconnected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_connection",
+        "x": 90,
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "attachment_east": "input",
+        "connection_east": "connected"
+      },
+      "apply": {
+        "model": "goo:block/goo_pipe_attachment",
+        "x": 90,
+        "y": 90,
+        "uvlock": true
+      }
+    }
+  ]
+}
