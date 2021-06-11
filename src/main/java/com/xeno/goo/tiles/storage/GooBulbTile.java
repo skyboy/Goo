@@ -1,4 +1,4 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.storage;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.enchantments.Containment;
@@ -10,6 +10,7 @@ import com.xeno.goo.library.Compare;
 import com.xeno.goo.network.*;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import com.xeno.goo.util.FluidHandlerWrapper;
 import com.xeno.goo.util.MultiGooTank;
 import com.xeno.goo.util.IGooTank;
@@ -45,7 +46,7 @@ import java.util.*;
 import java.util.function.Supplier;
 
 public class GooBulbTile extends GooContainerAbstraction implements ITickableTileEntity,
-        FluidUpdatePacket.IFluidPacketReceiver, GooFlowPacket.IGooFlowReceiver
+                                                                    FluidUpdatePacket.IFluidPacketReceiver, GooFlowPacket.IGooFlowReceiver
 {
     // it only takes 9 ticks to tier up because of the goo already in the object.
     // at level 1 this is also negligible

@@ -6,7 +6,7 @@ import com.xeno.goo.entities.GooSplat;
 import com.xeno.goo.library.AudioHelper;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.GooContainerAbstraction;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;

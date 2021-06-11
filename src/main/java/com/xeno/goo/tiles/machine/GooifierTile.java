@@ -1,10 +1,12 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.machine;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.aequivaleo.Equivalencies;
 import com.xeno.goo.aequivaleo.GooEntry;
 import com.xeno.goo.aequivaleo.GooValue;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.FluidHandlerHelper;
+import com.xeno.goo.tiles.base.FluidHandlerInteractionAbstraction;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;

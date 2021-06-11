@@ -1,7 +1,6 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.creature;
 
 import com.google.common.collect.Lists;
-import com.xeno.goo.blocks.BlocksRegistry;
 import com.xeno.goo.blocks.CrystalNest;
 import com.xeno.goo.entities.GooBee;
 import com.xeno.goo.setup.Registry;
@@ -13,7 +12,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.nbt.NBTUtil;
-import net.minecraft.tileentity.BeehiveTileEntity;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;

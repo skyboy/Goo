@@ -1,4 +1,4 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.machine;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.library.MixerRecipe;
@@ -7,6 +7,7 @@ import com.xeno.goo.network.FluidUpdatePacket;
 import com.xeno.goo.network.Networking;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import com.xeno.goo.util.FluidHandlerTankWrapper;
 import com.xeno.goo.util.GooMultiTank;
 import com.xeno.goo.util.IGooTank;

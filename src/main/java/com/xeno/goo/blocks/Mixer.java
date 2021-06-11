@@ -1,6 +1,6 @@
 package com.xeno.goo.blocks;
 
-import com.xeno.goo.tiles.MixerTile;
+import com.xeno.goo.tiles.machine.MixerTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;

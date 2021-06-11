@@ -7,7 +7,7 @@ import com.xeno.goo.items.Gauntlet;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.overlay.RayTracing;
 import com.xeno.goo.setup.Resources;
-import com.xeno.goo.tiles.GooContainerAbstraction;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.entity.Entity;

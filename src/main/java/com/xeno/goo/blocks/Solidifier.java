@@ -1,7 +1,7 @@
 package com.xeno.goo.blocks;
 
 import com.xeno.goo.library.VoxelHelper;
-import com.xeno.goo.tiles.SolidifierTile;
+import com.xeno.goo.tiles.machine.SolidifierTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;

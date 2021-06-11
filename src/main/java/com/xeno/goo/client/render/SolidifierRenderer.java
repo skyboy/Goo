@@ -2,7 +2,7 @@ package com.xeno.goo.client.render;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.SolidifierTile;
+import com.xeno.goo.tiles.machine.SolidifierTile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.model.IBakedModel;

@@ -1,7 +1,7 @@
 package com.xeno.goo.blocks;
 
 import com.xeno.goo.items.ItemsRegistry;
-import com.xeno.goo.tiles.CrystalNestTile;
+import com.xeno.goo.tiles.creature.CrystalNestTile;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;

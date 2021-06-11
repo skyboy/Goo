@@ -7,7 +7,7 @@ import com.xeno.goo.items.Basin;
 import com.xeno.goo.items.Gauntlet;
 import com.xeno.goo.library.AudioHelper;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.DrainTile;
+import com.xeno.goo.tiles.interaction.DrainTile;
 import com.xeno.goo.tiles.FluidHandlerHelper;
 import com.xeno.goo.util.GooTank;
 import com.xeno.goo.util.IGooTank;

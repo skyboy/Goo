@@ -1,6 +1,6 @@
 package com.xeno.goo.network;
 
-import com.xeno.goo.tiles.GooBulbTile;
+import com.xeno.goo.tiles.storage.GooBulbTile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemStack;

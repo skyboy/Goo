@@ -1,7 +1,7 @@
 package com.xeno.goo.client.render;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.xeno.goo.tiles.GooBulbTile;
+import com.xeno.goo.tiles.storage.GooBulbTile;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.IRenderTypeBuffer;

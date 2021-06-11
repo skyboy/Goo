@@ -7,7 +7,7 @@ import com.xeno.goo.library.AudioHelper.PitchFormulas;
 import com.xeno.goo.library.VoxelHelper;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.GooBulbTile;
+import com.xeno.goo.tiles.storage.GooBulbTile;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

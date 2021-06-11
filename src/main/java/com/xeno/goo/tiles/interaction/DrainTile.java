@@ -1,4 +1,4 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.interaction;
 
 import com.xeno.goo.entities.GooBlob;
 import com.xeno.goo.setup.Registry;

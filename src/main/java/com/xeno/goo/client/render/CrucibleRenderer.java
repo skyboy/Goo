@@ -3,7 +3,7 @@ package com.xeno.goo.client.render;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.CrucibleTile;
+import com.xeno.goo.tiles.machine.CrucibleTile;
 import com.xeno.goo.tiles.FluidHandlerHelper;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;

@@ -4,7 +4,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.xeno.goo.blocks.GooPump;
 import com.xeno.goo.client.models.FluidCuboid;
 import com.xeno.goo.setup.Registry;
-import com.xeno.goo.tiles.GooPumpTile;
+import com.xeno.goo.tiles.transport.GooPumpTile;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;

@@ -1,4 +1,4 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.interaction;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.fluids.GooFluid;
@@ -7,6 +7,7 @@ import com.xeno.goo.network.GooFlowPacket;
 import com.xeno.goo.network.Networking;
 import com.xeno.goo.overlay.RayTraceTargetSource;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import com.xeno.goo.util.GooTank;
 import com.xeno.goo.util.IGooTank;
 import net.minecraft.fluid.Fluid;
@@ -29,7 +30,7 @@ import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
 import java.util.Objects;
 
 public class TroughTile extends GooContainerAbstraction implements ITickableTileEntity,
-        FluidUpdatePacket.IFluidPacketReceiver, GooFlowPacket.IGooFlowReceiver
+                                                                   FluidUpdatePacket.IFluidPacketReceiver, GooFlowPacket.IGooFlowReceiver
 {
     private float verticalFillIntensity = 0f;
     private Fluid verticalFillFluid = Fluids.EMPTY;

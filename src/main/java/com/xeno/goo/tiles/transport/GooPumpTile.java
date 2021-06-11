@@ -1,4 +1,4 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.transport;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.aequivaleo.EntryHelper;
@@ -8,6 +8,7 @@ import com.xeno.goo.network.ChangeItemTargetPacket;
 import com.xeno.goo.network.GooFlowPacket;
 import com.xeno.goo.network.Networking;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.FluidHandlerHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;

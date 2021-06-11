@@ -1,6 +1,7 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.base;
 
 import com.xeno.goo.library.WeakConsumerWrapper;
+import com.xeno.goo.tiles.FluidHandlerHelper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;

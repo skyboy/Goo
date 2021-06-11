@@ -1,9 +1,10 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.interaction;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.entities.GooBlob;
 import com.xeno.goo.fluids.GooFluid;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.FluidHandlerHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.state.properties.BlockStateProperties;

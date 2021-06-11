@@ -1,6 +1,6 @@
 package com.xeno.goo.blocks;
 
-import com.xeno.goo.tiles.FluidHandlerInteractionAbstraction;
+import com.xeno.goo.tiles.base.FluidHandlerInteractionAbstraction;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.tileentity.TileEntity;

@@ -3,6 +3,7 @@ package com.xeno.goo.tiles;
 import com.xeno.goo.items.BasinAbstractionCapability;
 import com.xeno.goo.items.ItemsRegistry;
 import com.xeno.goo.setup.Registry;
+import com.xeno.goo.tiles.base.GooContainerAbstraction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;

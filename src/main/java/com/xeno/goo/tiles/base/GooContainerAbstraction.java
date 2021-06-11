@@ -1,7 +1,8 @@
-package com.xeno.goo.tiles;
+package com.xeno.goo.tiles.base;
 
 import com.xeno.goo.enchantments.Containment;
 import com.xeno.goo.overlay.RayTraceTargetSource;
+import com.xeno.goo.tiles.base.FluidHandlerInteractionAbstraction;
 import com.xeno.goo.util.IGooTank;
 import com.xeno.goo.util.MathUtil;
 import net.minecraft.block.BlockState;
@@ -11,7 +12,6 @@ import net.minecraft.nbt.ListNBT;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.Constants.NBT;
