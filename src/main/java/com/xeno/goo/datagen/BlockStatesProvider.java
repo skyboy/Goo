@@ -1,10 +1,9 @@
 package com.xeno.goo.datagen;
 
 import com.xeno.goo.GooMod;
-import com.xeno.goo.blocks.BlocksRegistry;
-import com.xeno.goo.blocks.CrystalNest;
-import com.xeno.goo.blocks.GooBulb;
-import com.xeno.goo.blocks.GooPump;
+import com.xeno.goo.blocks.*;
+import com.xeno.goo.blocks.PipeBlock.AttachmentState;
+import com.xeno.goo.blocks.PipeBlock.ConnectionState;
 import com.xeno.goo.client.render.PumpRenderMode;
 import com.xeno.goo.fluids.GooFluid;
 import com.xeno.goo.setup.Registry;
@@ -42,6 +41,8 @@ public class BlockStatesProvider extends BlockStateProvider {
         registerTrough();
         registerCrystalNest();
         registerDecorativeBlocks();
+
+        registerBasicPipe();
     }
 
     private void registerDecorativeBlocks() {
@@ -775,5 +776,101 @@ public class BlockStatesProvider extends BlockStateProvider {
         model.texture("fixture_face", fixtureFace);
         model.texture("particle", baseBottom);
         horizontalBlock(BlocksRegistry.Trough.get(), state -> model);
+    }
+
+    private void registerBasicPipe() {
+
+        ResourceLocation baseBottom = new ResourceLocation(GooMod.MOD_ID, "block/pump_base_bottom");
+
+        final float min = 6,
+                max = 16 - min;
+
+        BlockModelBuilder base = models()
+                .withExistingParent("goo_pipe", "block/block")
+                .texture("particle", baseBottom)
+                .element()
+                .from(min, min, min)
+                .to(max, max, max)
+                .allFaces((t, u) -> u.texture("#base_bottom"))
+                .end();
+        base.texture("base_bottom", baseBottom);
+
+        BlockModelBuilder connectionSingle = models()
+                .withExistingParent("goo_pipe_connection", "block/block")
+                .texture("particle", baseBottom)
+                .element()
+                .from(min, min, min)
+                .to(max, 16, max)
+                .allFaces((t, u) -> u.texture("#base_bottom"))
+                .end();
+        connectionSingle.texture("base_bottom", baseBottom);
+
+        BlockModelBuilder attachment = models()
+                .withExistingParent("goo_pipe_attachment", "block/block")
+                .texture("particle", baseBottom)
+                .element()
+                .from(5, 16-3, 5)
+                .to(16-5, 16, 16-5)
+                .allFaces((t, u) -> u.texture("#base_bottom"))
+                .end();
+        attachment.texture("base_bottom", baseBottom);
+
+        BlockModelBuilder connectionThrough = models()
+                .withExistingParent("goo_pipe_through_connection", "block/block")
+                .texture("particle", baseBottom)
+                .element()
+                .from(min, 0, min)
+                .to(max, 16, max)
+                .allFaces((t, u) -> u.texture("#base_bottom"))
+                .end();
+        connectionThrough.texture("base_bottom", baseBottom);
+
+        MultiPartBlockStateBuilder bld = getMultipartBuilder(BlocksRegistry.Pipe.get());
+
+        // no connections
+        bld.part().modelFile(base)
+                .uvLock(true)
+                .addModel()
+                .condition(PipeBlock.CONNECTIONS[0], ConnectionState.getDisconnectedStates())
+                .condition(PipeBlock.CONNECTIONS[1], ConnectionState.getDisconnectedStates())
+                .condition(PipeBlock.CONNECTIONS[2], ConnectionState.getDisconnectedStates())
+                .condition(PipeBlock.CONNECTIONS[3], ConnectionState.getDisconnectedStates())
+                .condition(PipeBlock.CONNECTIONS[4], ConnectionState.getDisconnectedStates())
+                .condition(PipeBlock.CONNECTIONS[5], ConnectionState.getDisconnectedStates());
+
+        // connections and their mirror. this exists to help minimize on screen quads
+        for (Direction d : new Direction[] { Direction.DOWN, Direction.NORTH, Direction.WEST }) {
+            int rotationX = getRotationXFromDirection(d);
+            int rotationY = getRotationYFromDirection(d);
+            bld.part().modelFile(connectionThrough)
+                    .uvLock(true)
+                    .rotationX(rotationX).rotationY(rotationY)
+                    .addModel()
+                    .condition(PipeBlock.CONNECTIONS[d.ordinal()], ConnectionState.getConnectedStates())
+                    .condition(PipeBlock.CONNECTIONS[d.getOpposite().ordinal()], ConnectionState.getConnectedStates()) // with mirror
+            ;
+        }
+
+        // single connections
+        for (Direction d : Direction.values()) {
+            int rotationX = getRotationXFromDirection(d);
+            int rotationY = getRotationYFromDirection(d);
+            bld.part().modelFile(connectionSingle)
+                    .uvLock(true)
+                    .rotationX(rotationX).rotationY(rotationY)
+                    .addModel()
+                    .condition(PipeBlock.CONNECTIONS[d.ordinal()], ConnectionState.getConnectedStates())
+                    .condition(PipeBlock.CONNECTIONS[d.getOpposite().ordinal()], ConnectionState.getDisconnectedStates()) // not if mirrored
+            ;
+            bld.part().modelFile(attachment)
+                    .uvLock(true)
+                    .rotationX(rotationX).rotationY(rotationY)
+                    .addModel()
+                    .condition(PipeBlock.ATTACHMENTS[d.ordinal()], AttachmentState.getVisibleStates())
+                    .condition(PipeBlock.CONNECTIONS[d.ordinal()], ConnectionState.getConnectedStates()) // and the connection exists
+            ;
+        }
+
+        simpleBlockItem(BlocksRegistry.Pipe.get(), connectionThrough);
     }
 }
