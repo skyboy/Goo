@@ -16,8 +16,8 @@
     },
     {
       "when": {
-        "connection_down": "connected",
-        "connection_up": "connected"
+        "connection_down": "connected_plain|connected_attachment",
+        "connection_up": "connected_plain|connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_through_connection",
@@ -28,8 +28,8 @@
     },
     {
       "when": {
-        "connection_north": "connected",
-        "connection_south": "connected"
+        "connection_north": "connected_plain|connected_attachment",
+        "connection_south": "connected_plain|connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_through_connection",
@@ -40,8 +40,8 @@
     },
     {
       "when": {
-        "connection_west": "connected",
-        "connection_east": "connected"
+        "connection_west": "connected_plain|connected_attachment",
+        "connection_east": "connected_plain|connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_through_connection",
@@ -52,7 +52,7 @@
     },
     {
       "when": {
-        "connection_down": "connected",
+        "connection_down": "connected_plain|connected_attachment",
         "connection_up": "disconnected"
       },
       "apply": {
@@ -64,8 +64,7 @@
     },
     {
       "when": {
-        "attachment_down": "input",
-        "connection_down": "connected"
+        "connection_down": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",
@@ -76,7 +75,7 @@
     },
     {
       "when": {
-        "connection_up": "connected",
+        "connection_up": "connected_plain|connected_attachment",
         "connection_down": "disconnected"
       },
       "apply": {
@@ -87,8 +86,7 @@
     },
     {
       "when": {
-        "attachment_up": "input",
-        "connection_up": "connected"
+        "connection_up": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",
@@ -98,7 +96,7 @@
     },
     {
       "when": {
-        "connection_north": "connected",
+        "connection_north": "connected_plain|connected_attachment",
         "connection_south": "disconnected"
       },
       "apply": {
@@ -110,8 +108,7 @@
     },
     {
       "when": {
-        "attachment_north": "input",
-        "connection_north": "connected"
+        "connection_north": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",
@@ -122,7 +119,7 @@
     },
     {
       "when": {
-        "connection_south": "connected",
+        "connection_south": "connected_plain|connected_attachment",
         "connection_north": "disconnected"
       },
       "apply": {
@@ -134,8 +131,7 @@
     },
     {
       "when": {
-        "attachment_south": "input",
-        "connection_south": "connected"
+        "connection_south": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",
@@ -146,7 +142,7 @@
     },
     {
       "when": {
-        "connection_west": "connected",
+        "connection_west": "connected_plain|connected_attachment",
         "connection_east": "disconnected"
       },
       "apply": {
@@ -158,8 +154,7 @@
     },
     {
       "when": {
-        "attachment_west": "input",
-        "connection_west": "connected"
+        "connection_west": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",
@@ -170,7 +165,7 @@
     },
     {
       "when": {
-        "connection_east": "connected",
+        "connection_east": "connected_plain|connected_attachment",
         "connection_west": "disconnected"
       },
       "apply": {
@@ -182,8 +177,7 @@
     },
     {
       "when": {
-        "attachment_east": "input",
-        "connection_east": "connected"
+        "connection_east": "connected_attachment"
       },
       "apply": {
         "model": "goo:block/goo_pipe_attachment",

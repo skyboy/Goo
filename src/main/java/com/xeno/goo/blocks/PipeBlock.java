@@ -14,11 +14,9 @@ public class PipeBlock extends Block {
 
 	public static enum ConnectionState implements IStringSerializable {
 		DISCONNECTED,
-		CONNECTED,
+		CONNECTED_PLAIN,
+		CONNECTED_ATTACHMENT,
 		;
-
-		public final boolean canConnect = true;
-		public final boolean isConnected = ordinal() != 0;
 
 		@Override
 		public String getString() {
@@ -26,32 +24,23 @@ public class PipeBlock extends Block {
 			return name().toLowerCase(Locale.ROOT);
 		}
 
+		private static final ConnectionState[] DISCONNECTED_STATES = new ConnectionState[] { DISCONNECTED },
+				CONNECTED_STATES = new ConnectionState[] { CONNECTED_PLAIN, CONNECTED_ATTACHMENT },
+				ATTACHMENT_STATES = new ConnectionState[] { CONNECTED_ATTACHMENT };
+
 		public static ConnectionState[] getConnectedStates() {
 
-			return new ConnectionState[] { CONNECTED };
+			return CONNECTED_STATES;
 		}
 
 		public static ConnectionState[] getDisconnectedStates() {
 
-			return new ConnectionState[] { DISCONNECTED };
-		}
-	}
-
-	public static enum AttachmentState implements IStringSerializable {
-		OUTPUT,
-		IN_OUT,
-		INPUT,
-		;
-
-		@Override
-		public String getString() {
-
-			return name().toLowerCase(Locale.ROOT);
+			return DISCONNECTED_STATES;
 		}
 
-		public static AttachmentState[] getVisibleStates() {
+		public static ConnectionState[] getAttachmentStates() {
 
-			return new AttachmentState[] { INPUT };
+			return ATTACHMENT_STATES;
 		}
 	}
 
@@ -62,15 +51,6 @@ public class PipeBlock extends Block {
 			EnumProperty.create("connection_south", ConnectionState.class),
 			EnumProperty.create("connection_west", ConnectionState.class),
 			EnumProperty.create("connection_east", ConnectionState.class)
-	};
-
-	public static final EnumProperty<AttachmentState>[] ATTACHMENTS = new EnumProperty[] {
-			EnumProperty.create("attachment_down", AttachmentState.class),
-			EnumProperty.create("attachment_up", AttachmentState.class),
-			EnumProperty.create("attachment_north", AttachmentState.class),
-			EnumProperty.create("attachment_south", AttachmentState.class),
-			EnumProperty.create("attachment_west", AttachmentState.class),
-			EnumProperty.create("attachment_east", AttachmentState.class)
 	};
 
 	public PipeBlock() {
@@ -87,7 +67,6 @@ public class PipeBlock extends Block {
 
 		builder
 				.add(CONNECTIONS)
-				.add(ATTACHMENTS)
 		;
 	}
 

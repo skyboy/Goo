@@ -2,7 +2,6 @@ package com.xeno.goo.datagen;
 
 import com.xeno.goo.GooMod;
 import com.xeno.goo.blocks.*;
-import com.xeno.goo.blocks.PipeBlock.AttachmentState;
 import com.xeno.goo.blocks.PipeBlock.ConnectionState;
 import com.xeno.goo.client.render.PumpRenderMode;
 import com.xeno.goo.fluids.GooFluid;
@@ -866,8 +865,7 @@ public class BlockStatesProvider extends BlockStateProvider {
                     .uvLock(true)
                     .rotationX(rotationX).rotationY(rotationY)
                     .addModel()
-                    .condition(PipeBlock.ATTACHMENTS[d.ordinal()], AttachmentState.getVisibleStates())
-                    .condition(PipeBlock.CONNECTIONS[d.ordinal()], ConnectionState.getConnectedStates()) // and the connection exists
+                    .condition(PipeBlock.CONNECTIONS[d.ordinal()], ConnectionState.getAttachmentStates())
             ;
         }
 
