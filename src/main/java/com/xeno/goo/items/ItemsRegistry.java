@@ -38,6 +38,7 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> GOO_BULB = ITEMS
             .register("goo_bulb", () -> new GooBulbItem(BlocksRegistry.Bulb.get(), new Item.Properties().group(GooMod.ITEM_GROUP).maxStackSize(64).setISTER(ISTERProvider::gooBulb)));
     public static final RegistryObject<Item> GOO_PUMP = ITEMS.register("goo_pump", () -> new BlockItem(BlocksRegistry.Pump.get(), new Item.Properties().group(GooMod.ITEM_GROUP).maxStackSize(64)));
+    public static final RegistryObject<Item> PIPE = ITEMS.register("pipe", () -> new BlockItem(BlocksRegistry.Pipe.get(), new Item.Properties().group(GooMod.ITEM_GROUP).maxStackSize(64)));
     public static final RegistryObject<Item> GOOIFIER = ITEMS
             .register("gooifier", () -> new BlockItem(BlocksRegistry.Gooifier.get(), new Item.Properties().group(GooMod.ITEM_GROUP).maxStackSize(64)));
     public static final RegistryObject<Item> CRUCIBLE = ITEMS
